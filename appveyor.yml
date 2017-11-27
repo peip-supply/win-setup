@@ -13,6 +13,8 @@ install:
 build_script:
   - echo after reboot
   - echo %TEST_VAR%
+  - cd %APPVEYOR_BUILD_FOLDER%\vagrant\ubuntu
+  - vagrant up
 
 test: off
 deploy: off
