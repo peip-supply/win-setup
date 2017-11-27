@@ -4,3 +4,4 @@ platform: 'x86'
 
 install:
   - cinst git.install
+  - cinst vagrant
