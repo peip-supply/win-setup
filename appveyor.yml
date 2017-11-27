@@ -4,8 +4,9 @@ platform: 'x86'
 
 install:
   - cinst git.install
+  - cinst virtualbox
   - set TEST_VAR=Reboot successful!
-  - ps: choco install vagrant -y --ignore-package-exit-codes --no-progress
+  - cinst vagrant -y --ignore-package-exit-codes --no-progress
   - ps: Restart-Computer -Force      # here the server goes restarting
   - echo before reboot
   - ps: Start-Sleep -s 10
