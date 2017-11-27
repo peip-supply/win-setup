@@ -5,9 +5,9 @@ platform: 'x86'
 install:
   - cinst git.install
   - set TEST_VAR=Reboot successful!
-  - echo before reboot
-  - ps: choco install -y vagrant
+  - ps: choco install vagrant -y --ignore-package-exit-codes
   - ps: Restart-Computer -Force      # here the server goes restarting
+  - echo before reboot
   - ps: Start-Sleep -s 10
 
 build_script:
