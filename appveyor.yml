@@ -4,6 +4,15 @@ platform: 'x86'
 
 install:
   - cinst git.install
-  - cinst vagrant
-  - echo rebooting...
-  - ps: Restart-Computer -Force
+  - set TEST_VAR=Reboot successful!
+  - echo before reboot
+  - ps: choco install -y vagrant
+  - ps: Restart-Computer -Force      # here the server goes restarting
+  - ps: Start-Sleep -s 10
+
+build_script:
+  - echo after reboot
+  - echo %TEST_VAR%
+
+test: off
+deploy: off
