@@ -11,7 +11,7 @@ environment:
 
 install:
   #- cinst git.install
-  - bash -v
+  - C:\msys64\usr\bin\bash -v
   - cinst virtualbox
   - set TEST_VAR=Reboot successful!
   - cinst vagrant -y --ignore-package-exit-codes --no-progress
