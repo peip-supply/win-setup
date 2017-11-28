@@ -4,7 +4,7 @@ platform: 'x86'
 
 install:
   - cinst git.install
-  - bash -v
+  - C:\Program Files\Git\usr\bin\bash.exe -v
   - cinst virtualbox
   - set TEST_VAR=Reboot successful!
   - cinst vagrant -y --ignore-package-exit-codes --no-progress
