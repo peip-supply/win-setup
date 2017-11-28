@@ -3,7 +3,8 @@ shallow_clone: false
 platform: 'x86'
 
 install:
-  - cinst git.install
+  #- cinst git.install
+  - bash -v
   - cinst virtualbox
   - set TEST_VAR=Reboot successful!
   - cinst vagrant -y --ignore-package-exit-codes --no-progress
